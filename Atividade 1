@@ -1,0 +1,17 @@
+fun main(args: Array<String>){
+    var estudante = mutableListOf<String>()
+    while(true){
+        print ("=== CADASTRAR ESTUDANTES ===")
+        print ("Informe o nome do estudante: ")
+        var nome = readLine()!!
+        if (nome.uppercase() == "PARE"){
+          println ("Total de estudantes cadastrados: ${estudante.size}")
+          estudante.forEachIndexed { index, estudante ->
+              println("${index + 1}. $estudante")
+          }
+            break
+        }
+    estudante.add(nome)
+        println ("$nome cadastrado com sucesso!")
+    }
+}
