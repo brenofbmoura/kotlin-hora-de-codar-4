@@ -1,0 +1,17 @@
+fun main(args: Array<String>){
+    var frutas = mutableListOf<String>("Maçã", "Abacaxi", "Limão", "Banana", "Laranja", "Abacate")
+   while(frutas.isNotEmpty()){
+       print ("=== LISTA DE FRUTAS ===")
+       println (frutas)
+       print ("Informe uma fruta: ")
+       var resposta = readLine()!!
+       val encontrada = frutas.find{it.equals(resposta, ignoreCase = true)}
+       if (encontrada != null) {
+           frutas.remove(encontrada)
+           println ("$encontrada removida da lista!")
+       } else {
+           println ("Fruta indisponível no mercado")
+       }
+   }
+    println ("Lista de compras finalizadas")
+}
