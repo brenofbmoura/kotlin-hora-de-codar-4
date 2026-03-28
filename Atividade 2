@@ -1,0 +1,11 @@
+fun main(args: Array<String>){
+    var planetas = listOf<String>("Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno")
+    print ("Informe um planeta: ")
+    var resposta = readLine()!!
+    val encontrado = planetas.any {it.equals(resposta, ignoreCase = true)}
+    if (encontrado){
+        println ("$resposta está na lista!")
+    } else {
+        println ("$resposta não está na lista!")
+    }
+}
